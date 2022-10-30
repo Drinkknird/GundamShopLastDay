@@ -1,4 +1,4 @@
-import 'package:appgunplalistshop/Screen/Home/welcome.dart';
+import 'package:appgunplalistshop/Bar/Home/cartbag.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -25,7 +25,7 @@ class _ShopScreenGundamState extends State<ShopScreenGundam> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
-        length: 10,
+        length: 14,
         child: FutureBuilder(
           future: readJson(),
           builder: (context, snapshot) {
@@ -33,11 +33,13 @@ class _ShopScreenGundamState extends State<ShopScreenGundam> {
               var data = snapshot.data;
               return Scaffold(
                   appBar: AppBar(
+                    backgroundColor: Color(0xFF332d2b),
+                    centerTitle: true,
                     automaticallyImplyLeading: true,
                     title: new Text('Shopping'),
-                    bottom: TabBar(
+                    flexibleSpace: TabBar(
                       tabs: [
-                        for (var i = 0; i < 9; i++)
+                        for (var i = 0; i < data.length; i++)
                           Tab(
                             //icon: Icon(Icons.directions_car), //เอากลับมาถ้าอยากใส่
                             text: data[i]["id"],
@@ -45,44 +47,53 @@ class _ShopScreenGundamState extends State<ShopScreenGundam> {
                       ],
                     ),
                   ),
+                  backgroundColor: Color(0xFFf7f6f4),
                   body: TabBarView(children: [
                     for (var val in data)
-                      Column(
-                        children: [
-                          Padding(padding: EdgeInsets.all(30)),
-                          InkWell(
-                              child: Image.asset(
-                                val['image'],
-                                height: 300,
+                      Column(children: [
+                        Padding(padding: EdgeInsets.all(30)),
+                        InkWell(
+                            child: Image.asset(
+                              val['image'],
+                              height: 300,
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CartBag(),
+                                ),
+                              );
+                            }),
+                        Padding(padding: EdgeInsets.all(10)),
+                        InkWell(
+                            child: Text(val["name"]),),
+                        Padding(padding: EdgeInsets.all(10)),
+                        InkWell(
+                            child: Text(val["price"]),),
+                        Padding(padding: EdgeInsets.all(10)),
+                        InkWell(
+                          child: TextButton(
+                              child: Text('ADD TO BAG!'),
+                              style: TextButton.styleFrom(
+                                primary: Colors.white,
+                                backgroundColor: Colors.teal,
+                                onSurface: Colors.grey,
                               ),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Welcome()),
-                                );
+                              onPressed: () {
+                                final snackBar = SnackBar(
+                                    content: const Text('Added To Bag !'),
+                                    action: SnackBarAction(
+                                      label: 'Got it',
+                                      onPressed: () {
+                                        // Some code to undo the change.
+                                      },
+                                    ));
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
                               }),
-                              Padding(padding: EdgeInsets.all(10)),
-                              InkWell(
-                              child: Text(val["name"]),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Welcome()),
-                                );
-                              }),
-                              Padding(padding: EdgeInsets.all(10)),
-                              InkWell(
-                              child: Text(val["price"]),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Welcome()),
-                                );
-                              }),
-                        ])
+                        )
+                      ]),
                   ]));
             }
             return CircularProgressIndicator();

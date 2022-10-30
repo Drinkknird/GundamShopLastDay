@@ -1,6 +1,7 @@
-import 'package:appgunplalistshop/Bar/Home/Shop.dart';
-import 'package:appgunplalistshop/Bar/Home/bottomNavigationBar.dart';
-import 'package:appgunplalistshop/Screen/Home/Test.dart';
+import 'package:appgunplalistshop/Bar/Home/cartbag.dart.dart';
+import 'package:appgunplalistshop/Bar/Home/detailGradeGundamPage.dart';
+import 'package:appgunplalistshop/Bar/Home/shopPage.dart';
+import 'package:appgunplalistshop/Bar/profile/widget/body.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -33,14 +34,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     DetailGundam(),
     ShopScreenGundam(),
-    Text(
-      'Index 3: bag',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Profile',
-      style: optionStyle,
-    ),
+    CartBag(),
+    BodyProfile(),
   ];
 
   void _onItemTapped(int index) {
@@ -60,26 +55,26 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.red,
+            backgroundColor: Color(0xFFfcab88),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.attach_money_sharp),
             label: 'Business',
-            backgroundColor: Colors.green,
+            backgroundColor: Color(0xFFffd28d),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.shopping_cart),
             label: 'School',
-            backgroundColor: Colors.purple,
+            backgroundColor: Color(0xFF89dad0),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.person_sharp),
             label: 'Settings',
-            backgroundColor: Colors.pink,
+            backgroundColor: Color(0xFF89d7da),
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Color(0xFF332d2b),
         onTap: _onItemTapped,
       ),
     );

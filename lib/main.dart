@@ -1,10 +1,9 @@
 import 'dart:convert';
 
-import 'package:appgunplalistshop/Bar/Home/bottomNavigationBar.dart';
+import 'package:appgunplalistshop/Bar/Home/shopPage.dart';
+import 'package:appgunplalistshop/Bar/intro/intro.dart';
 import 'package:appgunplalistshop/Bar/naviBar.dart';
-import 'package:appgunplalistshop/Screen/Home/homepage.dart';
 import 'package:flutter/material.dart';
-import 'package:appgunplalistshop/Screen/Home/welcome.dart';
 
 void main() {
   runApp(MyApp());
