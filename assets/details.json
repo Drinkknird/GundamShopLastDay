@@ -1,0 +1,85 @@
+[{
+        "id": "1",
+        "type": "SUPER DEFORMED[SD]",
+        "name": "SDEX GUNDAM EXIA",
+        "price": "240.00 บาท",
+        "image": "assets/images/SDEX GUNDAM EXIA.jpg"
+    },
+    {
+        "id": "2",
+        "type": "SUPER DEFORMED[SD]",
+        "name": "SDEX SINANJU",
+        "price": "240.00 บาท",
+        "image": "assets/images/SDEX SINANJU.jpg"
+    },
+    {
+        "id": "3",
+        "type": "HIGH GRADE[HG]",
+        "name": "HG GUNDAM AERIAL",
+        "price": "520.00 บาท",
+        "image": "assets/images/HG GUNDAM AERIAL.jpg"
+    },
+    {
+        "id": "4",
+        "type": "HIGH GRADE[HG]",
+        "name": "HG STRIKE FREEDOM GUNDAM (REVIVE)",
+        "price": "800.00 บาท",
+        "image": "assets/images/HG STRIKE FREEDOM GUNDAM (REVIVE).jpg"
+    },
+    {
+        "id": "5",
+        "type": "Real Grade[RG]",
+        "name": "RG AILE STRIKE GUNDAM",
+        "price": "1000.00 บาท",
+        "image": "assets/images/RG AILE STRIKE GUNDAM.jpg"
+    },
+    {
+        "id": "6",
+        "type": "Real Grade[RG]",
+        "name": "RG UNICORN GUNDAM",
+        "price": "1520.00 บาท",
+        "image": "assets/images/RG UNICORN GUNDAM.jpg"
+    },
+    {
+        "id": "7",
+        "type": "Master Grade[MG]",
+        "name": "MG GUNDAM EXIA",
+        "price": "1520.00 บาท",
+        "image": "assets/images/MG GUNDAM EXIA.jpg"
+    },
+    {
+        "id": "8",
+        "type": "Master Grade[MG]",
+        "name": "MG 00 RAISER",
+        "price": "2600.00 บาท",
+        "image": "assets/images/MG 00 RAISER.jpg"
+    },
+    {
+        "id": "9",
+        "type": "Perfect Grade[PG]",
+        "name": "PG STRIKE GUNDAM",
+        "price": "5600.00 บาท",
+        "image": "assets/images/PG STRIKE GUNDAM.jpg"
+    },
+    {
+        "id": "10",
+        "type": "Perfect Grade[PG]",
+        "name": "PG PERFECT STRIKE GUNDAM",
+        "price": "10000.00 บาท",
+        "image": "assets/images/PG PERFECT STRIKE GUNDAM.jpg"
+    },
+    {
+        "id": "11",
+        "type": "Mega Size",
+        "name": "1/48 MEGASIZE RX-78-2 GUNDAM",
+        "price": "3120.00 บาท",
+        "image": "assets/images/"
+    },
+    {
+        "id": "12",
+        "type": "Mega Size",
+        "name": "1/48 MEGASIZE UNICORN GUNDAM",
+        "price": "4000.00 บาท",
+        "image": "assets/images/Mega.jpg"
+    }
+]
